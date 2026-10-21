@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Mahasiswa - Web Professional</title>
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link FontAwesome untuk memunculkan ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!-- Tag body ditambahkan di sini -->
+    <div class="container">
+        <header class="profile-header">
+            <img src="profile.jpg" alt="Foto Profil" class="profile-img">
+            <div class="profile-info">
+                <h1>Rohaeni Nurmalasari</h1>
+                <ul class="info-list">
+                    <li><i class="fa-solid fa-id-badge"></i> NIM: <span>24552011154</span></li>
+                    <li><i class="fa-solid fa-graduation-cap"></i> Program Studi: <span>S1 Teknik Informatika</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> Alamat: <span>Jl. Merdeka No. 10, Kab.Subang</span></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main class="content-grid">
+            <section class="hobbies">
+                <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Hobi Saya</h2>
+                <div class="hobby-list">
+                    <div class="hobby-item">Menonton Movie</div>
+                    <div class="hobby-item">Menulis</div>
+                    <div class="hobby-item">Fotografi</div>
+                    <div class="hobby-item">Berenang</div>
+                </div>
+            </section>
+            
+            <section class="education">
+                <h2 class="section-title"><i class="fa-solid fa-building-columns"></i> Riwayat Pendidikan</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jenjang</th>
+                                <th>Nama Sekolah</th>
+                                <th>Tahun Lulus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SMP</td>
+                                <td>Madrasah Tsanawiyah</td>
+                                <td>2017</td>
+                            </tr>
+                            <tr>
+                                <td>SMK</td>
+                                <td>SMK NEGERI KASOMALANG</td>
+                                <td>2024</td>
+                            </tr>
+                            <tr>
+                                <td>S1</td>
+                                <td>Universitas Teknologi Bandung</td>
+                                <td>2028</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="action-area">
+            <button class="btn-message" onclick="tampilkanModal()">
+                <i class="fa-solid fa-envelope"></i> Tampilkan Pesan
+            </button>
+        </footer>
+    </div>
+    
+    <div class="modal-overlay" id="pesanModal">
+        <div class="modal-box">
+            <h3><i class="fa-solid fa-circle-check"></i> Halo!</h3>
+            <p>Terima kasih telah mengunjungi halaman biodata saya. Jangan ragu untuk menghubungi saya melalui kontak yang tersedia.</p>
+            <button class="btn-close" onclick="tutupModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('pesanModal');
+        function tampilkanModal() {
+            modal.classList.add('active');
+        }
+        function tutupModal() {
+            modal.classList.remove('active');
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                tutupModal();
+            }
+        }
+    </script>
+</body>
+</html>
